@@ -13,10 +13,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //inputText
-        var editText = findViewById<EditText>(R.id.edit_text)
-        var editText2 = findViewById<EditText>(R.id.edit_text2)
-        var inputName = editText.editableText
-        var inputPass = editText2.editableText
+        var editName = findViewById<EditText>(R.id.edit_text)
+        var editPass = findViewById<EditText>(R.id.edit_text2)
+        var inputName = editText.editableName
+        var inputPass = editText2.editablePass
 
         //ボタンコード
         val button: Button = findViewById<Button>(R.id.button)
