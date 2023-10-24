@@ -11,7 +11,7 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        // 画像ファイルをリソースから取得
+        // 画像ファイル取得
         val backgroundImage: BitmapDrawable = resources.getDrawable(R.drawable.test1) as BitmapDrawable
 
         // アクティビティの背景に画像を設定
@@ -32,13 +32,13 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         deleteButton.setOnClickListener {
-            // SharedPreferencesをクリアして保存された名前とパスワードを削除
+            // SharedPreferencesに保存された名前とパスワードを削除
             val sharedPreferences = getSharedPreferences("user_info", MODE_PRIVATE)
             val editor = sharedPreferences.edit()
             editor.clear()
             editor.apply()
 
-            // このアクティビティを終了してメイン画面に戻る
+            // Main画面に戻る
             finish()
         }
     }
